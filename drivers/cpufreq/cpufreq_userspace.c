@@ -132,8 +132,8 @@ static int cpufreq_governor_userspace(struct cpufreq_policy *policy,
 		per_cpu(cpu_is_managed, cpu) = 1;
 		per_cpu(cpu_min_freq, cpu) = policy->min;
 		per_cpu(cpu_max_freq, cpu) = policy->max;
-		per_cpu(cpu_cur_freq, cpu) = policy->cur;
-		per_cpu(cpu_set_freq, cpu) = policy->cur;
+		per_cpu(cpu_cur_freq, cpu) = 998400; //policy->cur;
+		per_cpu(cpu_set_freq, cpu) = 998400; //policy->cur;
 		dprintk("managing cpu %u started "
 			"(%u - %u kHz, currently %u kHz)\n",
 				cpu,
